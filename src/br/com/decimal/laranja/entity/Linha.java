@@ -11,24 +11,43 @@ import java.io.Serializable;
  */
 public class Linha implements Serializable {
 
-	private Long contaId;
-	private Long linhaId;
+	private static final long serialVersionUID = -292187744191157501L;
+	private Long idConta;
+	private Long idLinha;
+	private String descricao;
+	private Long tamanhoLinha;
 	private Long status;
 
-	public Long getContaId() {
-		return contaId;
+	public Long getIdConta() {
+		return idConta;
 	}
 
-	public void setContaId(Long contaId) {
-		this.contaId = contaId;
+	public void setIdConta(Long idConta) {
+		this.idConta = idConta;
 	}
 
-	public Long getLinhaId() {
-		return linhaId;
+	public Long getIdLinha() {
+		return idLinha;
 	}
 
-	public void setLinhaId(Long linhaId) {
-		this.linhaId = linhaId;
+	public void setIdLinha(Long idLinha) {
+		this.idLinha = idLinha;
+	}
+
+	public String getDescricao() {
+		return descricao;
+	}
+
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}
+
+	public Long getTamanhoLinha() {
+		return tamanhoLinha;
+	}
+
+	public void setTamanhoLinha(Long tamanhoLinha) {
+		this.tamanhoLinha = tamanhoLinha;
 	}
 
 	public Long getStatus() {

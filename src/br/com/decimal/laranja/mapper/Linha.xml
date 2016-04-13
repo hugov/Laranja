@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Linha">
+
+	<sql id="selectLinha">
+		select ID_MODULO as idModulo, NOME
+		from PlasticosNN.modulos
+	</sql>
+
+	<select id="selectAll" parameterType="br.com.decimal.laranja.entity.Linha" resultType="Linha">
+		<include refid="selectModulo" />
+		order by NOME
+	</select>
+
+	<select id="selectById" parameterType="java.lang.Integer" resultType="Modulo">
+		<include refid="selectModulo" />
+		WHERE ID_MODULO = #{value}
+	</select>
+
+	<insert id="insert" parameterType="br.com.decimal.laranja.entity.Linha">
+		insert into
+		PlasticosNN.MODULOS (NOME)
+		values (#{nome})
+	</insert>
+
+	<update id="update" parameterType="br.com.decimal.laranja.entity.Linha">
+		update PlasticosNN.MODULOS
+		set
+		NOME = #{nome}
+		where ID_MODULO = #{idModulo}
+	</update>
+
+	<delete id="delete" parameterType="java.lang.Integer">
+		delete from
+		PlasticosNN.MODULOS
+		where ID_MODULO = #{value}
+	</delete>
+
+</mapper>
