@@ -15,6 +15,7 @@
 
 	<typeAliases>
 		<typeAlias alias="Linha" type="br.com.decimal.laranja.entity.Linha"/>
+		<typeAlias alias="Linha" type="br.com.decimal.laranja.entity.Itinerario"/>
 	</typeAliases>
 
 	<environments default="development">
@@ -31,6 +32,7 @@
 
 	<mappers>
 		<mapper resource="br/com/decimal/laranja/mapper/Linha.xml"/>
+		<mapper resource="br/com/decimal/laranja/mapper/Itinerario.xml"/>
 	</mappers>
 
 </configuration>
